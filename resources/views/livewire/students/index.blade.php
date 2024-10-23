@@ -1,16 +1,18 @@
 <div>
-    <x-slot name="header">
-        <h2 class="text-xl font-semibold leading-tight text-gray-800 dark:text-gray-200">
-            {{ __('Student List') }}
-        </h2>
-    </x-slot>
-
     <div class="py-4">
         <div class="mx-auto max-w-7xl sm:px-6 lg:px-8">
 
-            <button type="button" class="inline-flex items-center px-4 py-3 mb-4 text-sm font-medium text-white bg-teal-500 border border-transparent rounded-lg shadow-md gap-x-2 hover:bg-teal-600 focus:outline-none focus:bg-teal-600 disabled:opacity-50 disabled:pointer-events-none">
-                Add Student
-              </button>
+            <div class="flex justify-between p-4 item-center">
+                <div>
+                    <h1 class="text-2xl font-bold text-gray-800 dark:text-neutral-200">Students</h1>
+                    <p class="text-sm text-gray-500 dark:text-neutral-400">List of all students</p>
+                </div>
+               <div>
+                <a href="{{ route('students.create') }}" wire:navigate class="inline-flex items-center px-4 py-3 mb-4 text-sm font-medium text-white bg-indigo-500 border border-transparent rounded-lg shadow-md gap-x-2 hover:bg-indigo-600 focus:outline-none focus:bg-indigo-600 disabled:opacity-50 disabled:pointer-events-none">
+                    Add Student
+                </a>
+               </div>
+            </div>
 
             <div class="overflow-hidden bg-white shadow-sm dark:bg-gray-800 sm:rounded-lg">
                 <div class="p-6 text-gray-900 dark:text-gray-100">

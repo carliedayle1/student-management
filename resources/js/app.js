@@ -1,10 +1,10 @@
 import "./bootstrap";
 import "preline";
-import Alpine from "alpinejs";
+// import Alpine from "alpinejs";
 
-window.Alpine = Alpine;
+// window.Alpine = Alpine;
 
-Alpine.start();
+// Alpine.start();
 
 // This code should be added to <head>.
 // It's used to prevent page load glitches.
