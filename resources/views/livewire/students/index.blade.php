@@ -28,11 +28,31 @@
                               <table class="min-w-full divide-y divide-gray-200 dark:divide-neutral-700" id="paginated-students">
                                 <thead>
                                   <tr>
-                                    <th scope="col" class="px-6 py-3 text-sm font-medium uppercase text-start">ID</th>
-                                    <th scope="col" class="px-6 py-3 text-sm font-medium uppercase text-start">Name</th>
-                                    <th scope="col" class="px-6 py-3 text-sm font-medium uppercase text-start">Email</th>
-                                    <th scope="col" class="px-6 py-3 text-sm font-medium uppercase text-start">Class</th>
-                                    <th scope="col" class="px-6 py-3 text-sm font-medium uppercase text-start">Section</th>
+                                    <th scope="col" class="px-6 py-3 text-sm font-medium uppercase text-start">
+                                        <x-sortable column="id" :sortColumn="$sortColumn" :sortDirection="$sortDirection">
+                                            ID
+                                        </x-sortable>
+                                    </th>
+                                    <th scope="col" class="px-6 py-3 text-sm font-medium uppercase text-start">
+                                        <x-sortable column="name" :sortColumn="$sortColumn" :sortDirection="$sortDirection">
+                                            Name
+                                        </x-sortable>
+                                        </th>
+                                    <th scope="col" class="px-6 py-3 text-sm font-medium uppercase text-start">
+                                        <x-sortable column="email" :sortColumn="$sortColumn" :sortDirection="$sortDirection">
+                                            Email
+                                        </x-sortable>
+                                    </th>
+                                    <th scope="col" class="px-6 py-3 text-sm font-medium uppercase text-start">
+                                        <x-sortable column="class_id" :sortColumn="$sortColumn" :sortDirection="$sortDirection">
+                                            Class
+                                        </x-sortable>
+                                    </th>
+                                    <th scope="col" class="px-6 py-3 text-sm font-medium uppercase text-start">
+                                        <x-sortable column="section_id" :sortColumn="$sortColumn" :sortDirection="$sortDirection">
+                                            Section
+                                        </x-sortable>
+                                    </th>
                                   </tr>
                                 </thead>
                                 <tbody>
@@ -67,7 +87,7 @@
             </div>
 
             {{-- Spinner --}}
-            <x-spinner wire:loading />
+            {{-- <x-spinner wire:loading /> --}}
             {{-- End Spinner --}}
         </div>
     </div>
