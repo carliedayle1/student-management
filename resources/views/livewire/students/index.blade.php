@@ -29,27 +29,27 @@
                                 <thead>
                                   <tr>
                                     <th scope="col" class="px-6 py-3 text-sm font-medium uppercase text-start">
-                                        <x-sortable column="id" :sortColumn="$sortColumn" :sortDirection="$sortDirection">
+                                        <x-sortable column="id" :$sortColumn :$sortDirection>
                                             ID
                                         </x-sortable>
                                     </th>
                                     <th scope="col" class="px-6 py-3 text-sm font-medium uppercase text-start">
-                                        <x-sortable column="name" :sortColumn="$sortColumn" :sortDirection="$sortDirection">
+                                        <x-sortable column="name" :$sortColumn :$sortDirection>
                                             Name
                                         </x-sortable>
                                         </th>
                                     <th scope="col" class="px-6 py-3 text-sm font-medium uppercase text-start">
-                                        <x-sortable column="email" :sortColumn="$sortColumn" :sortDirection="$sortDirection">
+                                        <x-sortable column="email" :$sortColumn :$sortDirection>
                                             Email
                                         </x-sortable>
                                     </th>
                                     <th scope="col" class="px-6 py-3 text-sm font-medium uppercase text-start">
-                                        <x-sortable column="class_id" :sortColumn="$sortColumn" :sortDirection="$sortDirection">
+                                        <x-sortable column="class_id" :$sortColumn :$sortDirection>
                                             Class
                                         </x-sortable>
                                     </th>
                                     <th scope="col" class="px-6 py-3 text-sm font-medium uppercase text-start">
-                                        <x-sortable column="section_id" :sortColumn="$sortColumn" :sortDirection="$sortDirection">
+                                        <x-sortable column="section_id" :$sortColumn :$sortDirection>
                                             Section
                                         </x-sortable>
                                     </th>
