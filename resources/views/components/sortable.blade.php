@@ -1,7 +1,7 @@
 @props(['column', 'sortColumn' , 'sortDirection'])
 
 <div class="flex cursor-pointer gap-x-2 group" wire:click="sortBy('{{ $column }}')">
-    <p class="{{ $sortColumn == $column ? 'border-b-2 border-indigo-300' : '' }}"> 
+    <p> 
         {{ $slot }}
     </p>
     @if($sortColumn == $column)
