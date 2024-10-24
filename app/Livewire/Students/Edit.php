@@ -8,20 +8,26 @@ use App\Models\Section;
 use App\Models\Student;
 use Livewire\Component;
 
-class Create extends Component
+class Edit extends Component
 {
+    public Student $student;
 
     public StudentForm $form;
 
     public $sections = [];
 
+    public function mount()
+    {
+        $this->form->setStudent($this->student);
+        $this->sections = Section::where('class_id', $this->student->class_id)->get();
+    }
+
     public function render()
     {
-        return view('livewire.students.create', [
+        return view('livewire.students.edit', [
             'classes' => Classes::all()
         ]);
     }
-
 
     public function updated($property)
     {
@@ -34,14 +40,14 @@ class Create extends Component
         // }
     }
 
-    public function store()
+    public function update()
     {
         $this->validate();
         
-        Student::create(
+        $this->student->update(
             $this->form->all()
         );
-                
+
         // flash()->success('Student added successfully');
         
         return $this->redirect(Index::class, navigate: true);
